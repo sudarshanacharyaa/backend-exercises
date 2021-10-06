@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxygen Web</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/index.css">
-
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,12 +18,11 @@
 <body>
 
     <header>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <h1> <img src="./images/1200px-OxygenOSLogo.svg.png" width="50px" height="50px"
-                            style="margin: 10px;" alt="logo"> Oxygen Users </h1>
-                </a>
+                <a class="navbar-brand" href="#" ><h1> <img src="./images/1200px-OxygenOSLogo.svg.png" width="50px"
+                        height="50px" style="margin: 10px;" alt="logo"> Oxygen Notes </h1></a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -37,13 +33,13 @@
                 <div class="nav justify-content-end">
                     <div class="collapse navbar-collapse  " id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item" style="margin: 0 50px;">
-                                <a class="nav-link  active" style="color: red;" aria-current="page" href="#">Users</a>
+                            <li class="nav-item"  style="margin: 0 50px;">
+                                <a class="nav-link" href="./index.html">Users</a>
                             </li>
                             <li class="nav-item" style="margin: 0 50px;">
-                                <a class="nav-link" href="./notes.html">Notes</a>
+                                <a class="nav-link active" style="color: red;" aria-current="page" href="#">Notes</a>
                             </li>
-                            <li class="nav-item" style="margin: 0 50px;">
+                            <li class="nav-item"  style="margin: 0 50px;">
                                 <a class="nav-link" href="./contactus.html">Contact Us</a>
                             </li>
                         </ul>
@@ -51,51 +47,45 @@
                 </div>
             </div>
         </nav>
+
+
     </header>
 
     <main>
-        <section>
-            <div class="hero container-fluid" id="heroBanner">
-                <h2>Get Oxygenated!</h2>
-                <h6>The users of Oxygen Web</h6>
-                <button class="btn btn-danger my-3" onclick="loadData()">Oxygen Users</button>
-            </div>
-        </section>
+        <div class=" container-fluid my-5 row">
+            <section class="col-md-6">
+                <div class="card" id="leftContent">
+                    <div class="card-header">
+                        The notes you will need every moment like Oxygen
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Type in your Oxygen Zone</h6>
+                        <div class="form-floating my-4">
+                            <textarea class="form-control" style="height: 250px" placeholder="Leave a comment here"
+                                id="textArea"></textarea>
+                            <label for="floatingTextarea">Your Oxygen zone.</label>
+                        </div>
+                        <button class="btn btn-danger" id="saveBtn">Save note</button>
+                    </div>
+                </div>
+            </section>
 
-        <section>
+            <section class="col-md-6">
+                <h2>Your Notes</h2>
+                <div class="container-fluid row" id="notes"></div>
 
+            </section>
+        </div>
 
-            <div class="container-fluid">
-                <table id="table" class="table table-striped ">
-
-                    <thead>
-                        <tr >
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            <th>Phone</th>
-                            <th>Website</th>
-                            <th>Company</th>
-                        </tr>
-                    </thead>
-                    <tbody id="data">
-
-                    </tbody>
-                </table>
-            </div>
-
-
-        </section>
     </main>
 
     <footer>
+
     </footer>
 
 
     <!-- Scripts -->
-    <script src="./js/users.js"></script>
+    <script src="./js/webnotes.js"></script>
 </body>
 
 </html>
