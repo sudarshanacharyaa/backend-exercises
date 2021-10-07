@@ -58,8 +58,14 @@
             <div class="hero container-fluid" id="heroBanner">
                 <h2>Get Oxygenated!</h2>
                 <h6>The users of Oxygen Web</h6>
-                <button class="btn btn-danger my-3" onclick="loadData()">Oxygen Users</button>
+                <button class="btn btn-danger my-3" onclick="loadData()">Click to get user list</button>
+                <form class="d-flex">
+                    <input id="oxygenInput" class="form-control me-2" onkeyup="oxygenSearch()" type="text" placeholder="Find an oxygen user by name" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="button">Find</button>
+                  </form>
             </div>
+
+
         </section>
 
         <section>
